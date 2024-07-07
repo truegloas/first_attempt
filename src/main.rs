@@ -18,4 +18,11 @@ fn main() {
     view_string(s);
     println!("");
     view_number(num);
+
+    println!("");
+
+    let mut numbers = [134, 235645, 65643, 643214, 53412, 6234, 7234, 81342];
+    println!("{:?}", numbers); // [1, 2, 3, 4, 5, 6, 7, 8],
+    println!("ты гей {}", numbers[3]);
+    numbers[3] = 33122i32;
 }
