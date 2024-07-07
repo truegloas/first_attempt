@@ -10,6 +10,12 @@ fn sum(num1: i32, num2: i32) -> i32 {
     return num1 + num2;
 }
 
+fn view_array(num_array:[i32; 8]) {
+    for i in num_array {
+        print!("{i} ");
+    }
+}
+
 fn main() {
     let s: &str = "Hi, gloas";
 
@@ -25,4 +31,13 @@ fn main() {
     println!("{:?}", numbers); // [1, 2, 3, 4, 5, 6, 7, 8],
     println!("ты гей {}", numbers[3]);
     numbers[3] = 33122i32;
+
+    for i in 1..10 {
+        view_number(i);
+        print!(" ");
+    }
+
+    println!();
+    view_array(numbers);
+    println!();
 }
