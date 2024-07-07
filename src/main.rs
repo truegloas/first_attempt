@@ -1,12 +1,7 @@
-use std::io;
+fn sum(num1: i8, num2: i8) {
+    num1 + num2;
+}
 
-fn main() -> io::Result<()> {
-    println!("Enter your name: ");
-
-    let mut buffer = String::new();
-    io::stdin().read_line(&mut buffer)?;
-
-    println!("Hello, {}", buffer);
-
-    Ok(())
+fn main() {
+    println!("Hello, World");
 }
