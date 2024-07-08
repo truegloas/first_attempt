@@ -6,5 +6,9 @@ fn main() {
     let mut buffer = String::new();
     io::stdin().read_line(&mut buffer).unwrap();
 
-    println!("Hello, {}", buffer);
+    print!("Hello, {}", buffer);
+
+    buffer = "".to_string();
+    io::stdin().read_line(&mut buffer).unwrap();
+    println!("{}", buffer.trim().parse::<i32>().expect("Not a number"));
 }
