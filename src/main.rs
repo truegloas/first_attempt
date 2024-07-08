@@ -1,43 +1,12 @@
-fn view_string(s: &str) {
-    print!("{s}");
-}
-
-fn view_number(num: i32) {
-    print!("{num}");
-}
-
-fn sum(num1: i32, num2: i32) -> i32 {
-    return num1 + num2;
-}
-
-fn view_array(num_array:[i32; 8]) {
-    for i in num_array {
-        print!("{i} ");
-    }
-}
-
 fn main() {
-    let s: &str = "Hi, gloas";
+    MainWindow::new().unwrap().run().unwrap();
+}
 
-    let num = sum(5, -10);
-
-    view_string(s);
-    println!("");
-    view_number(num);
-
-    println!("");
-
-    let mut numbers = [134, 235645, 65643, 643214, 53412, 6234, 7234, 81342];
-    println!("{:?}", numbers); // [1, 2, 3, 4, 5, 6, 7, 8],
-    println!("ты гей {}", numbers[3]);
-    numbers[3] = 33122i32;
-
-    for i in 1..10 {
-        view_number(i);
-        print!(" ");
+slint::slint! {
+    export component MainWindow inherits Window {
+        Text {
+            text: "Hello, World!";
+            color: black;
+        }
     }
-
-    println!();
-    view_array(numbers);
-    println!();
 }

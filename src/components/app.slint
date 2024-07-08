@@ -1,0 +1,37 @@
+import { VerticalBox, HorizontalBox, Button } from "std-widgets.slint";
+export component AppWindow inherits Window {
+    in property <string> window_title;
+
+    width: 400px;
+    height: 500px;
+    title: window_title;
+    default-font-size: 20px;
+
+    property <int> count: 0;
+
+    VerticalBox {
+        alignment: center;
+    
+        Text {
+            font-size: 30px;
+            horizontal-alignment: center;
+            text: "Count: " + count;
+        }
+        HorizontalBox {
+            Button {
+                text: "add";
+                clicked => {
+                    root.count += 1;
+                }
+            }
+            Button {
+                text: "subtract";
+                clicked => {
+                    if root.count != 0 {
+                        root.count -= 1;
+                    }
+                }
+            }
+        }
+    }
+}
