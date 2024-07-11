@@ -1,3 +1,5 @@
+use std::io;
+
 fn view_string(s: &str) {
     print!("{s}");
 }
@@ -40,4 +42,10 @@ fn main() {
     println!();
     view_array(numbers);
     println!();
+
+    println!("Input number: ");
+    let mut input_str = String::new();
+    io::stdin().read_line(&mut input_str).unwrap();
+    let input_num: i32 = input_str.trim().parse().unwrap();
+    println!("{}", input_num);
 }
