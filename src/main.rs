@@ -1,14 +1,23 @@
-use std::io;
-
 fn main() {
-    println!("Enter your name: ");
+    let mut summer: i32 = 0;
 
-    let mut buffer = String::new();
-    io::stdin().read_line(&mut buffer).unwrap();
+    loop {
+        println!("Enter numbers to sum: ");
 
-    print!("Hello, {}", buffer);
+        let mut number = String::new();
+        std::io::stdin()
+            .read_line(&mut number)
+            .expect("Failed to read the line");
 
-    buffer = "".to_string();
-    io::stdin().read_line(&mut buffer).unwrap();
-    println!("{}", buffer.trim().parse::<i32>().expect("Not a number"));
+        let number: i32 = match number.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Not a number");
+                continue;
+            }
+        };
+
+        summer += number;
+        println!("Summered number: {summer}");
+    }
 }
