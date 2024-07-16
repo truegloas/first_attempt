@@ -1,7 +1,16 @@
-fn sum(num1: i8, num2: i8) -> i8 {
-    return num1 + num2;
+fn var_and_mut_lesson() {
+    const CONST_VARIABLE: i8 = 10;
+    let immutable_variable: i8 = 20;
+    let mut mutable_variable: i32 = 128;
+
+    // CONST_VARIABLE += 10;
+    // immutable_variable += 10;
+    mutable_variable += 10;
+
+    println!("{} {} {}", CONST_VARIABLE, immutable_variable, mutable_variable);
+
 }
 
 fn main() {
-    println!("{}", sum(5, 8));
+    var_and_mut_lesson();
 }
