@@ -1,0 +1,1 @@
+pub const CONST_VARIABLE: i32 = 10;

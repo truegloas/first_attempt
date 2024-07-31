@@ -1,5 +1,7 @@
+mod lib;
+use lib::*;
+
 fn var_and_mut_lesson() {
-    const CONST_VARIABLE: i32 = 10;
     let immutable_variable: i32 = 20;
     let mut mutable_variable: i32 = 128;
 
@@ -7,12 +9,15 @@ fn var_and_mut_lesson() {
     // immutable_variable += 10;
     mutable_variable += 10;
 
+    let new_immut = mutable_variable * 10 - 5;
+
     println!("{} {} {}", CONST_VARIABLE, immutable_variable, mutable_variable);
     println!("Const + immut: {}", CONST_VARIABLE + immutable_variable);
     println!("Const + mut: {}", CONST_VARIABLE + mutable_variable);
     println!("Immut + mut: {}", immutable_variable + mutable_variable);
     println!("Shadowed variable: {}", shadowing_lesson(50));
     println!("Shadowed division: {}", shadowing_lesson(25));
+    println!("New immutable: {}", new_immut);
 }
 
 fn main() {
