@@ -50,8 +50,23 @@ fn shadowing_lesson() {
     println!("Shadowed division: {}", shadowing_example(25));
 }
 
-fn data_types_lesson(){
+fn data_types_lesson() {
+    println!("Scalar Types");
     println!("Floating Point Number {PI}");
     println!("Integer Number {INTEGER_CONST_VAR}");
-    println!("Unsigned number: {UNSIGNED_INT_CONST}");
+    println!("Unsigned Number: {UNSIGNED_INT_CONST}");
+
+    println!("Boolean Type");
+    println!("Bool Variable {F}");
+
+    println!("Character Type");
+    println!("Char Character: {LETTER_A}");
+    println!("Char Emoji: {CAT}");
+
+    let square_param: (f32, f32) = (42.5, 5.5);
+    println!("Compound Type - Tuple");
+    println!("Tuple: {}, {}", square_param.0, square_param.1);
+    let human_param: (f32, f32, i32, &str) = human_param_to_tuple(178.0, 105.0, 24, "male");
+    print!("Tuple from function: ");
+    println!("{}, {}, {}, {}", human_param.0, human_param.1, human_param.2, human_param.3);
 }
