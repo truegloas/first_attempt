@@ -69,4 +69,9 @@ fn data_types_lesson() {
     let human_param: (f32, f32, i32, &str) = human_param_to_tuple(178.0, 105.0, 24, "male");
     print!("Tuple from function: ");
     println!("{}, {}, {}, {}", human_param.0, human_param.1, human_param.2, human_param.3);
+
+    println!("Our names");
+    for i in NAMES {
+        println!("{i}");
+    }
 }

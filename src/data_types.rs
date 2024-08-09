@@ -8,6 +8,8 @@ pub const F: bool = true;
 pub const LETTER_A: char = 'a';
 pub const CAT: char = '😼';
 
+pub const NAMES: [&str; 4] = ["Yura", "SerGay", "Atryom", "Mariyka"];
+
 pub fn human_param_to_tuple(height: f32, weight: f32, age: i32, sex: &str) -> (f32, f32, i32, &str) {
     (height, weight, age, sex)
 }
