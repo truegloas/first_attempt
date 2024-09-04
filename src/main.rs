@@ -70,7 +70,8 @@ fn data_types_lesson() {
     print!("Tuple from function: ");
     println!("{}, {}, {}, {}", human_param.0, human_param.1, human_param.2, human_param.3);
 
-    println!("Our names");
+    println!("Compound Type - Array");
+    println!("Array with our names");
     for i in NAMES {
         println!("{i}");
     }
